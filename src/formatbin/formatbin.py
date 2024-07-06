@@ -4,12 +4,36 @@ import argparse
 
 
 def process_binary(filename: os.PathLike, n: int) -> dict:
-    raise NotImplementedError("process_binary function is not implemented")
-    return dict()
+    """Create a dictionary containing the first n lines of a binary file.
+    Read data and create n chunks of data.
+    arguments:
+    -----------
+        filename: path to the input file
+        n: number of chunks to create
+
+    returns:
+    -----------
+        dictionary containing the chunk number as key and the chunk data as value.
+    """
+    data = [int(i.strip()) for i in Path(filename).read_text().splitlines()]
+    data_dict = {i: data[i:len(data):n] for i in range(0, n)}
+    return data_dict
 
 
 def create_files(data: dict, path: os.PathLike = None) -> None:
-    raise NotImplementedError("create_files function is not implemented")
+    """Create output files from the data dictionary.
+    arguments:
+    -----------
+        data: dictionary containing the chunk number as key and the chunk data as value.
+        path: path to the output directory. If not provided, the current directory is used.
+    """
+    if path is None:
+        path = Path(os.getcwd())
+    else:
+        path = Path(path)
+    for i in range(len(data)):
+        with open(path / f"output_{i}.txt", "w") as f:
+            f.writelines(data[i])
 
 
 def main():
