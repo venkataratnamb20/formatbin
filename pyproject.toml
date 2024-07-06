@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "formatbin"
 version = "0.1.0"
-description = ""
+description = "Process binary data from a file and create files with processed data."
 authors = ["venkataratnamb20 <venkat4ratnam@gmail.com>"]
 readme = "README.md"
 packages = [{include = "formatbin", from = "src"}]
@@ -9,6 +9,13 @@ packages = [{include = "formatbin", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 
+
+[tool.poetry.group.dev.dependencies]
+poetry = "^1.8.3"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
 
 [build-system]
 requires = ["poetry-core"]
