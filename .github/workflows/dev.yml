@@ -1,4 +1,4 @@
-name: pypackage-dev
+name: formatbin-dev
 
 on:
   push:
