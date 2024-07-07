@@ -23,7 +23,7 @@ class TestFormatBin(unittest.TestCase):
         data = process_binary(self.filename, self.n)
         create_files(data, self.results_dir)
         self.assertTrue(self.results_dir.is_dir())
-        for i in range(n):
+        for i in range(self.n):
             file_suffix = f'0{i}' if i < 10 else f'{i}'
             self.assertTrue(
                 Path(self.results_dir, f"input_{file_suffix}.txt").is_file())
