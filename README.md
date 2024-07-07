@@ -1,4 +1,8 @@
 # FormatBin
+
+## Execution Steps
+
+
 ## Requirements
 ### input files
 
