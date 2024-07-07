@@ -1,3 +1,5 @@
+[![formatbin-dev](https://github.com/venkataratnamb20/formatbin/actions/workflows/dev.yml/badge.svg)](https://github.com/venkataratnamb20/formatbin/actions/workflows/dev.yml)
+
 # FormatBin
 
 ## Execution Steps
